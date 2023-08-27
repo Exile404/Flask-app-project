@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Donor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add Donor</h1>
+        <form action="/save_donor" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="blood_group">Blood Group:</label>
+            <input type="text" id="blood_group" name="blood_group">
+            
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+            
+            <input type="submit" value="Add Donor">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donor List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    <h1>Donor List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Blood Group</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donor in data %}
+            <tr>
+                <td>{{ donor[1] }}</td>
+                <td>{{ donor[2] }}</td>
+                <td>{{ donor[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button class="add-button"><a href="/add_donor">Add Donor</a></button>
+    <a href="/logout" class="logout-button">Log Out</a>
+</body>
+</html>
